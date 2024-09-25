@@ -1,0 +1,19 @@
+def squaretri(func):
+    def wrapper1(a,b,c):
+        res1 = func(a,b,c)
+        return res1
+    return wrapper1
+def squaretr(function):
+    def wrapper(width, height):
+        res = function(width, height)
+        return res
+    return wrapper
+@squaretr
+@squaretri
+
+def squaretr1(width, height):
+    return (width * height)/2
+h = float(input())
+w = float(input())
+r = squaretr1(h, w)
+print(r)
